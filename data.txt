@@ -1,0 +1,4 @@
+composer global require “fxp/composer-asset-plugin:1.0.0”
+
+
+composer create-project yiisoft/yii2-app-basic yii2-basic-moph
