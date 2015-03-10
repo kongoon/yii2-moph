@@ -2,6 +2,9 @@
 use yii\grid\GridView;
 
 echo GridView::widget([
-    'dataProvider'=>$dataProvider
+    'dataProvider'=>$dataProvider,
+    'columns'=>[
+        //'firstname',
+    ]
 ]);
 
