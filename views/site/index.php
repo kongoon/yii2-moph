@@ -1,6 +1,8 @@
 <?php
 /* @var $this yii\web\View */
 $this->title = 'My Yii Application';
+
+Yii::$app->db->open();
 ?>
 <div class="site-index">
 
