@@ -2,6 +2,7 @@
 namespace app\controllers;
 use yii\web\Controller;
 use app\models\PersonForm;
+use Yii;
 
 //ชื่อ Class ตามด้วย Controller
 class PersonController extends Controller{
@@ -13,7 +14,12 @@ class PersonController extends Controller{
     }
     public function actionPerson(){
         $model = new PersonForm;
-        return $this->render('person',['model'=>$model]);
+        if($model->load(Yii::$app->request->post())){
+            $value = $_POST['PersonForm'];
+        }else{
+            $value = null;
+        }
+        return $this->render('person',['model'=>$model,'value'=>$value]);
     }
     
     
