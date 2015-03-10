@@ -4,6 +4,7 @@ use yii\web\Controller;
 
 class PersonController extends Controller{
     public function actionTest(){
-        return $this->render('test');
+        $name = "มานพ กองอุ่น";
+        return $this->render('test',['myname'=>$name]);
     }
 }
