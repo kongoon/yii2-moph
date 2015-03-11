@@ -1,103 +1,55 @@
 <?php
-
 namespace app\models;
+use yii\db\ActiveRecord;
+use yii\web\IdentityInterface;
 
-class User extends \yii\base\Object implements \yii\web\IdentityInterface
-{
-    public $id;
-    public $username;
-    public $password;
-    public $authKey;
-    public $accessToken;
-
-    private static $users = [
-        '100' => [
-            'id' => '100',
-            'username' => 'admin',
-            'password' => 'admin',
-            'authKey' => 'test100key',
-            'accessToken' => '100-token',
-        ],
-        '101' => [
-            'id' => '101',
-            'username' => 'demo',
-            'password' => 'demo',
-            'authKey' => 'test101key',
-            'accessToken' => '101-token',
-        ],
-    ];
-
-    /**
-     * @inheritdoc
-     */
-    public static function findIdentity($id)
-    {
-        return isset(self::$users[$id]) ? new static(self::$users[$id]) : null;
+class User extends ActiveRecord implements IdentityInterface{
+ 
+    //กำหนดสถานะ ค่าเริ่มต้น 1
+    const STATUS_NOTACTIVE = 0;
+    const STATUS_ACTIVE = 1;
+    //กำหนดสิทธิื ค่าเริ่มต้น 1
+    const ROLE_USER = 1;
+    const ROLE_MANAGER = 5;
+    const ROLE_ADMIN = 10;
+    
+    public static function tableName(){
+        return 'user';
+    }
+    public function rules(){
+        return [
+            ['status','default','value'=>self::STATUS_ACTIVE],
+            ['status','in','range'=>
+                [self::STATUS_ACTIVE, self::STATUS_NOTACTIVE]],
+            
+            ['role','default','value'=>self::ROLE_USER],
+            ['role','in','range'=>
+                [self::ROLE_USER,self::ROLE_MANAGER,self::ROLE_ADMIN]],
+            [['username','email'],'unique'],
+            [['username','password_hash'],'required']
+        ];
     }
 
-    /**
-     * @inheritdoc
-     */
-    public static function findIdentityByAccessToken($token, $type = null)
-    {
-        foreach (self::$users as $user) {
-            if ($user['accessToken'] === $token) {
-                return new static($user);
-            }
-        }
 
-        return null;
+    #### Interface Method ####
+    public function getAuthKey() {
+        
     }
 
-    /**
-     * Finds user by username
-     *
-     * @param  string      $username
-     * @return static|null
-     */
-    public static function findByUsername($username)
-    {
-        foreach (self::$users as $user) {
-            if (strcasecmp($user['username'], $username) === 0) {
-                return new static($user);
-            }
-        }
-
-        return null;
+    public function getId() {
+        
     }
 
-    /**
-     * @inheritdoc
-     */
-    public function getId()
-    {
-        return $this->id;
+    public function validateAuthKey($authKey) {
+        
     }
 
-    /**
-     * @inheritdoc
-     */
-    public function getAuthKey()
-    {
-        return $this->authKey;
+    public static function findIdentity($id) {
+        
     }
 
-    /**
-     * @inheritdoc
-     */
-    public function validateAuthKey($authKey)
-    {
-        return $this->authKey === $authKey;
+    public static function findIdentityByAccessToken($token, $type = null) {
+        
     }
 
-    /**
-     * Validates password
-     *
-     * @param  string  $password password to validate
-     * @return boolean if password provided is valid for current user
-     */
-    public function validatePassword($password)
-    {
-        return $this->password === $password;
-    }
 }
