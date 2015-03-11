@@ -1,4 +1,7 @@
 <?php
+//ดูเพิ่มเติมได้ที่
+//http://www.bsourcecode.com/yiiframework2/select-query-sql-queries/
+//http://www.yiiframework.com/doc-2.0/guide-db-query-builder.html
 namespace app\controllers;
 use yii\web\Controller;
 use app\models\Contact;
