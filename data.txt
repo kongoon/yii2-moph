@@ -12,3 +12,6 @@ composer require kartik-v/yii2-export "*"
 
 composer require "2amigos/yii2-google-maps-library" "*"
 composer require --prefer-dist miloschuman/yii2-highcharts-widget "dev-master"
+
+https://github.com/dektrium/yii2-user
+http://yii2-user.readthedocs.org/en/latest/getting-started/installation.html
