@@ -17,6 +17,8 @@ composer require --prefer-dist miloschuman/yii2-highcharts-widget "dev-master"
 https://github.com/dektrium/yii2-user
 http://yii2-user.readthedocs.org/en/latest/getting-started/installation.html
 
+https://github.com/amnah/yii2-user
+
 #Yii2 Admin
 https://github.com/mdmsoft/yii2-admin
 
