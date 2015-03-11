@@ -30,6 +30,9 @@ class QueryController extends Controller{
                 ->all();
         $dataProvider = new ActiveDataProvider([
             'query'=>$query,
+            'pagination'=>[
+                'pageSize'=>2
+            ]
         ]);
         
         $query1 = new Query;
@@ -38,6 +41,9 @@ class QueryController extends Controller{
                 ->all();
         $dataProvider1 = new ActiveDataProvider([
             'query'=>$query1,
+            'pagination'=>[
+                'pageSize'=>3
+            ]
         ]);
         return $this->render('query2',
                 ['dataProvider'=>$dataProvider,

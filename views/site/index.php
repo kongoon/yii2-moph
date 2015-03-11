@@ -51,3 +51,5 @@ Yii::$app->db->open();
 
     </div>
 </div>
+<?php
+echo Yii::$app->security->generatePasswordHash('manop');
