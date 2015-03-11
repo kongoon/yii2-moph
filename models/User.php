@@ -52,4 +52,8 @@ class User extends ActiveRecord implements IdentityInterface{
         
     }
 
+<<<<<<< .merge_file_a03892
 }
+=======
+}
+>>>>>>> .merge_file_a08600
