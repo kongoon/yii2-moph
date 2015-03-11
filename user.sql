@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `password_reset_token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `role` smallint(6) NOT NULL DEFAULT '1',
-  `status` smallint(6) NOT NULL DEFAULT '10',
+  `status` smallint(6) NOT NULL DEFAULT '1',
   `created_at` int(11) NOT NULL,
   `updated_at` int(11) NOT NULL,
   PRIMARY KEY (`id`),
