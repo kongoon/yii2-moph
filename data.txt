@@ -19,3 +19,10 @@ http://yii2-user.readthedocs.org/en/latest/getting-started/installation.html
 
 #Yii2 Admin
 https://github.com/mdmsoft/yii2-admin
+
+#Theme
+https://bitbucket.org/kongoon/yii2-theme-material
+https://bitbucket.org/kongoon/yii2-theme-superhero
+https://bitbucket.org/kongoon/yii2-theme-simplex
+https://bitbucket.org/kongoon/yii2-theme-flaty
+https://bitbucket.org/kongoon/yii2-theme-flat
