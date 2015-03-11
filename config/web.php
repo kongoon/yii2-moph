@@ -15,9 +15,12 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-        'user' => [
+        /*'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
+        ],*/
+        'user' => [
+            'class' => 'amnah\yii2\user\components\User',
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -39,6 +42,31 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\DbManager'
+        ]
+    ],
+    'as access' => [
+        'class' => 'mdm\admin\components\AccessControl',
+        'allowActions' => [
+            'admin/*', // add or remove allowed actions to this list
+        ]
+    ],
+    'modules' => [
+        'user' => [
+            'class' => 'amnah\yii2\user\Module',
+            // set custom module properties here ...
+        ],
+        'admin' => [
+            'class' => 'mdm\admin\Module',
+            'controllerMap' => [
+                 'assignment' => [
+                    'class' => 'mdm\admin\controllers\AssignmentController',
+                    'userClassName' => 'amnah\yii2\user\models\User',
+                    'idField' => 'id', // id field of model User
+                ]
+            ],
+        ]
     ],
     'params' => $params,
 ];

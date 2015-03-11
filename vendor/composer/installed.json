@@ -934,5 +934,272 @@
             "faker",
             "yii2"
         ]
+    },
+    {
+        "name": "yiisoft/yii2-authclient",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/yiisoft/yii2-authclient.git",
+            "reference": "75ca1dff6eb20f8c820df73a61ba842174f161f2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/yiisoft/yii2-authclient/zipball/75ca1dff6eb20f8c820df73a61ba842174f161f2",
+            "reference": "75ca1dff6eb20f8c820df73a61ba842174f161f2",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "yiisoft/yii2": "*"
+        },
+        "time": "2015-03-01 06:24:14",
+        "type": "yii2-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "yii\\authclient\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Paul Klimov",
+                "email": "klimov.paul@gmail.com"
+            }
+        ],
+        "description": "External authentication via OAuth and OpenID for the Yii framework",
+        "keywords": [
+            "OpenId",
+            "auth",
+            "oauth",
+            "yii2"
+        ]
+    },
+    {
+        "name": "amnah/yii2-user",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/amnah/yii2-user.git",
+            "reference": "596937ec03d10a569aebc95ed189dd25aa027f78"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/amnah/yii2-user/zipball/596937ec03d10a569aebc95ed189dd25aa027f78",
+            "reference": "596937ec03d10a569aebc95ed189dd25aa027f78",
+            "shasum": ""
+        },
+        "require": {
+            "yiisoft/yii2": "*",
+            "yiisoft/yii2-authclient": "*"
+        },
+        "time": "2015-02-21 16:44:17",
+        "type": "yii2-extension",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "amnah\\yii2\\user\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "amnah",
+                "email": "amnah.dev@gmail.com"
+            }
+        ],
+        "description": "Yii 2 user authentication module",
+        "keywords": [
+            "Authentication",
+            "auth",
+            "user",
+            "yii",
+            "yii2"
+        ]
+    },
+    {
+        "name": "bower-asset/jquery-ui",
+        "version": "1.11.3",
+        "version_normalized": "1.11.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/components/jqueryui.git",
+            "reference": "7e2d6bec1c729925d9ad7c0c9ab4b561174efa99"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/components/jqueryui/zipball/7e2d6bec1c729925d9ad7c0c9ab4b561174efa99",
+            "reference": "7e2d6bec1c729925d9ad7c0c9ab4b561174efa99",
+            "shasum": ""
+        },
+        "require": {
+            "bower-asset/jquery": ">=1.6"
+        },
+        "type": "bower-asset-library",
+        "extra": {
+            "bower-asset-main": [
+                "jquery-ui.js"
+            ],
+            "bower-asset-ignore": []
+        },
+        "installation-source": "dist"
+    },
+    {
+        "name": "yiisoft/yii2-jui",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/yiisoft/yii2-jui.git",
+            "reference": "26d4dbf60e3ea44669355f0bcc7189db92aa0270"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/yiisoft/yii2-jui/zipball/26d4dbf60e3ea44669355f0bcc7189db92aa0270",
+            "reference": "26d4dbf60e3ea44669355f0bcc7189db92aa0270",
+            "shasum": ""
+        },
+        "require": {
+            "bower-asset/jquery-ui": "1.11.*@stable",
+            "yiisoft/yii2": "*"
+        },
+        "time": "2015-03-03 23:14:05",
+        "type": "yii2-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "yii\\jui\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Qiang Xue",
+                "email": "qiang.xue@gmail.com"
+            }
+        ],
+        "description": "The Jquery UI extension for the Yii framework",
+        "keywords": [
+            "jQuery UI",
+            "yii2"
+        ]
+    },
+    {
+        "name": "mdmsoft/yii2-admin",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mdmsoft/yii2-admin.git",
+            "reference": "78e661e9fd86153254e6f2cac979a2da949161a5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mdmsoft/yii2-admin/zipball/78e661e9fd86153254e6f2cac979a2da949161a5",
+            "reference": "78e661e9fd86153254e6f2cac979a2da949161a5",
+            "shasum": ""
+        },
+        "require": {
+            "yiisoft/yii2": "~2.0",
+            "yiisoft/yii2-jui": "~2.0"
+        },
+        "suggest": {
+            "yiisoft/yii2-bootstrap": "Used when using layout 'left-menu', 'right-menu' or 'top-menu'"
+        },
+        "time": "2015-02-22 14:48:53",
+        "type": "yii2-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "mdm\\admin\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Misbahul Munir",
+                "email": "misbahuldmunir@gmail.com"
+            }
+        ],
+        "description": "Auth manager for Yii2 ",
+        "keywords": [
+            "admin",
+            "auth",
+            "yii"
+        ]
+    },
+    {
+        "name": "kongoon/yii2-theme-material",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://bitbucket.org/kongoon/yii2-theme-material.git",
+            "reference": "4d3683e6e3123374e833aab36f0769446053e78d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://bitbucket.org/kongoon/yii2-theme-material/get/4d3683e6e3123374e833aab36f0769446053e78d.zip",
+            "reference": "4d3683e6e3123374e833aab36f0769446053e78d",
+            "shasum": ""
+        },
+        "require": {
+            "yiisoft/yii2": "*"
+        },
+        "time": "2015-02-20 06:10:42",
+        "type": "yii2-extension",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "kongoon\\theme\\material\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Programmer Thailand",
+                "email": "contact@programmerthailand.com"
+            }
+        ],
+        "description": "Theme for Yii2 Web Application",
+        "keywords": [
+            "extension",
+            "material",
+            "theme",
+            "yii2"
+        ]
     }
 ]

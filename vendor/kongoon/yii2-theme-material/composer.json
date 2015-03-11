@@ -1,0 +1,21 @@
+{
+    "name": "kongoon/yii2-theme-material",
+    "description": "Theme for Yii2 Web Application",
+    "type": "yii2-extension",
+    "keywords":["yii2","extension","theme","material"],
+    "license":"MIT",
+    "authors":[
+        {
+            "name":"Programmer Thailand",
+            "email":"contact@programmerthailand.com"
+        }
+    ],
+    "require":{
+        "yiisoft/yii2": "*"
+    },
+    "autoload":{
+        "psr-4":{
+            "kongoon\\theme\\material\\": ""
+        }
+    }
+}

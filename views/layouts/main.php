@@ -3,12 +3,14 @@ use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
-use app\assets\AppAsset;
+use kongoon\theme\material;
+//use app\assets\AppAsset;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-AppAsset::register($this);
+//AppAsset::register($this);
+material\MaterialAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -38,10 +40,11 @@ AppAsset::register($this);
                     ['label' => 'Home', 'url' => ['/site/index']],
                     ['label' => 'About', 'url' => ['/site/about']],
                     ['label' => 'Contact', 'url' => ['/site/contact']],
+                    ['label' => 'User', 'url' => ['/user']],
                     Yii::$app->user->isGuest ?
-                        ['label' => 'Login', 'url' => ['/site/login']] :
-                        ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-                            'url' => ['/site/logout'],
+                        ['label' => 'Login', 'url' => ['/user/login']] :
+                        ['label' => 'Logout (' . Yii::$app->user->displayName . ')',
+                            'url' => ['/user/logout'],
                             'linkOptions' => ['data-method' => 'post']],
                 ],
             ]);
