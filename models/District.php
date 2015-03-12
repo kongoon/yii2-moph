@@ -53,7 +53,7 @@ class District extends \yii\db\ActiveRecord
      */
     public function getProvince()
     {
-        return $this->hasOne(BaseProvince::className(), ['id' => 'province_id']);
+        return $this->hasOne(Province::className(), ['id' => 'province_id']);
     }
 
     /**
@@ -61,6 +61,6 @@ class District extends \yii\db\ActiveRecord
      */
     public function getBaseTambons()
     {
-        return $this->hasMany(BaseTambon::className(), ['district_id' => 'id']);
+        return $this->hasMany(Tambon::className(), ['district_id' => 'id']);
     }
 }

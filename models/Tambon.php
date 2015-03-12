@@ -55,7 +55,7 @@ class Tambon extends \yii\db\ActiveRecord
      */
     public function getDistrict()
     {
-        return $this->hasOne(BaseDistrict::className(), ['id' => 'district_id']);
+        return $this->hasOne(District::className(), ['id' => 'district_id']);
     }
 
     /**
@@ -63,6 +63,6 @@ class Tambon extends \yii\db\ActiveRecord
      */
     public function getProvince()
     {
-        return $this->hasOne(BaseProvince::className(), ['id' => 'province_id']);
+        return $this->hasOne(Province::className(), ['id' => 'province_id']);
     }
 }

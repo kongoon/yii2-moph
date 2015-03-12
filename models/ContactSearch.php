@@ -19,7 +19,7 @@ class ContactSearch extends Contact
     {
         return [
             [['id'], 'integer'],
-            [['firstname', 'lastname', 'address', 'email'], 'safe'],
+            [['firstname', 'lastname', 'address', 'tambon_id', 'email'], 'safe'],
         ];
     }
 
@@ -42,7 +42,7 @@ class ContactSearch extends Contact
     public function search($params)
     {
         $query = Contact::find();
-
+        
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
@@ -54,7 +54,7 @@ class ContactSearch extends Contact
             // $query->where('0=1');
             return $dataProvider;
         }
-
+        $query->joinWith('tambon');
         $query->andFilterWhere([
             'id' => $this->id,
         ]);
@@ -62,7 +62,8 @@ class ContactSearch extends Contact
         $query->andFilterWhere(['like', 'firstname', $this->firstname])
             ->andFilterWhere(['like', 'lastname', $this->lastname])
             ->andFilterWhere(['like', 'address', $this->address])
-            ->andFilterWhere(['like', 'email', $this->email]);
+            ->andFilterWhere(['like', 'email', $this->email])
+            ->andFilterWhere(['like', 'base_tambon.tambon_name', $this->tambon_id]);
 
         return $dataProvider;
     }

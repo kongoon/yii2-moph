@@ -32,6 +32,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'firstname',
             'lastname',
             'address:ntext',
+            'tambon.tambon_name',
+            'tambon.district.district_name',
+            'tambon.province.province_name',
             'email:email',
         ],
     ]) ?>
