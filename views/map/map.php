@@ -18,7 +18,7 @@ foreach($contacts as $c){
         'content'=>'
      
             <h4>'.$c->firstname.' '.$c->lastname.'</h4>
-              <table class="table table-bordered table-hover">
+              <table class="table table-striped table-bordered table-hover">
                 <tr>
                     <td>ที่อยู่</td>
                     <td>'.$c->address.'</td>
@@ -47,4 +47,5 @@ foreach($contacts as $c){
   
   $map->addOverlay($marker);
 }
+
 echo $map->display();
