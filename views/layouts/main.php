@@ -28,7 +28,7 @@ material\MaterialAsset::register($this);
     <div class="wrap">
         <?php
             NavBar::begin([
-                'brandLabel' => 'My Company',
+                'brandLabel' => 'yiiMoph',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
@@ -37,13 +37,13 @@ material\MaterialAsset::register($this);
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => [
-                    ['label' => 'Home', 'url' => ['/site/index']],
-                    ['label' => 'About', 'url' => ['/site/about']],
-                    ['label' => 'Contact', 'url' => ['/site/contact']],
+                    ['label' => 'หน้าหลัก', 'url' => ['/site/index']],
+                    ['label' => 'เกี่ยวกับเรา', 'url' => ['/site/about']],
+                    ['label' => 'ติดต่อ', 'url' => ['/site/contact']],
                     ['label' => 'User', 'url' => ['/user']],
                     Yii::$app->user->isGuest ?
-                        ['label' => 'Login', 'url' => ['/user/login']] :
-                        ['label' => 'Logout (' . Yii::$app->user->displayName . ')',
+                        ['label' => 'เข้าสู่ระบบ', 'url' => ['/user/login']] :
+                        ['label' => 'ออกจากระบบ (' . Yii::$app->user->displayName . ')',
                             'url' => ['/user/logout'],
                             'linkOptions' => ['data-method' => 'post']],
                 ],
