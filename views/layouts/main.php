@@ -28,7 +28,7 @@ material\MaterialAsset::register($this);
     <div class="wrap">
         <?php
             NavBar::begin([
-                'brandLabel' => 'yiiMoph',
+                'brandLabel' => 'MophReport',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-default navbar-fixed-top',

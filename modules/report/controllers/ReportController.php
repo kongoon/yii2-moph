@@ -105,4 +105,5 @@ class ReportController extends Controller{
             'yy'=>$yy,'mm'=>$mm,'cnt'=>$cnt,'sumadj'=>$sumadj,'cmi'=>$cmi,'los'=>$los,'los_per_case'=>$los_per_case
         ]);
     }
+    
 }

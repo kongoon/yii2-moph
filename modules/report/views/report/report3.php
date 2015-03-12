@@ -134,7 +134,8 @@ use yii\helpers\Html;
                 ],
                 [
                     'label' => 'CMI',
-                    'attribute' => 'cmi'
+                    'attribute' => 'cmi',
+                    'format'=>['decimal',4]
                 ],
                 [
                     'label' => 'LOS',
@@ -143,7 +144,8 @@ use yii\helpers\Html;
                 ],
                 [
                     'label' => 'นอนเฉลี่ยต่อราย',
-                    'attribute' => 'los_per_case'
+                    'attribute' => 'los_per_case',
+                    'format'=>['decimal',2]
                 ],
             ]
         ]);
