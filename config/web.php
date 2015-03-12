@@ -52,6 +52,8 @@ $config = [
             'admin/*', // add or remove allowed actions to this list
             'site/*',
             'user/*',
+            'gii/*',
+            'report/*'
         ]
     ],
     'modules' => [
@@ -69,7 +71,10 @@ $config = [
                     'idField' => 'id', // id field of model User
                 ]
             ],
-        ]
+        ],
+        'report' => [
+            'class' => 'app\modules\report\Module',
+        ],
     ],
     'params' => $params,
 ];
