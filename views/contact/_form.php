@@ -39,6 +39,21 @@ use app\models\Province;
                 ]
                 );?>
     </div>
+    <div class="form-grop">
+        <?= Html::label('อำเภอ','district');?>
+        <?= Html::dropDownList('district',null,[],[
+            'class'=>'form-control',
+            'id'=>'district',
+            'prompt'=>'-เลือกอำเภอ-',
+            'onchange'=>'
+                $.get("'.Url::toRoute('base/loadtambon').'",
+                {id:$(this).val()})
+                .done(function(data){
+                    $("select#tambon").html(data);
+                });
+            '
+        ]);?>
+    </div>
     
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
