@@ -30,3 +30,16 @@ https://bitbucket.org/kongoon/yii2-theme-flaty
 https://bitbucket.org/kongoon/yii2-theme-flat
 
 https://github.com/miloschuman/yii2-highcharts
+
+
+Query 2
+
+SELECT year(t.DATETIME_DISCH) as yy, 
+month(t.DATETIME_DISCH) as mm, 
+count(t.AN) as cnt, 
+sum(t.ADJRW) as sumadj, 
+avg(t.ADJRW) as cmi , 
+sum(t.ACTLOS) as los, 
+avg(t.ACTLOS) as los_per_case
+FROM admission t  
+GROUP BY yy,mm
