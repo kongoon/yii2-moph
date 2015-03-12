@@ -23,7 +23,7 @@ class ContactController extends Controller
                     'delete' => ['post'],
                 ],
             ],
-            'access'=>[
+            /*'access'=>[
                 'class'=>  \yii\filters\AccessControl::className(),
                 'ruleConfig'=>[
                     'class'=>  \app\components\AccessRule::className(),
@@ -46,7 +46,7 @@ class ContactController extends Controller
                         ]
                     ]
                 ]
-            ],
+            ],*/
             
         ];
     }

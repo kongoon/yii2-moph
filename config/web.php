@@ -50,6 +50,8 @@ $config = [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
             'admin/*', // add or remove allowed actions to this list
+            'site/*',
+            'user/*',
         ]
     ],
     'modules' => [
@@ -59,6 +61,7 @@ $config = [
         ],
         'admin' => [
             'class' => 'mdm\admin\Module',
+            //'layout' => 'left-menu', 
             'controllerMap' => [
                  'assignment' => [
                     'class' => 'mdm\admin\controllers\AssignmentController',
