@@ -10,7 +10,7 @@ use yii\helpers\Html;
     <div class="col-md-12">
         <div class="panel panel-warning">
             <div class="panel-heading">
-                <h3 class="panel-title">จำนวนผู้ป่วยในแยกรายเดือน</h3>
+                <h3 class="panel-title"><i class="glyphicon glyphicon-signal"></i> จำนวนผู้ป่วยในแยกรายเดือน</h3>
             </div>
             <div class="panel-body">
                 <?php
@@ -39,7 +39,7 @@ use yii\helpers\Html;
     <div class="col-md-6">
         <div class="panel panel-success">
             <div class="panel-heading">
-                <h3 class="panel-title">ค่าเฉลี่ย CMI แยกรายเดือน</h3>
+                <h3 class="panel-title"><i class="glyphicon glyphicon-signal"></i> ค่าเฉลี่ย CMI แยกรายเดือน</h3>
             </div>
             <div class="panel-body">
                 <?php
@@ -67,7 +67,7 @@ use yii\helpers\Html;
     <div class="col-md-6">
         <div class="panel panel-info">
             <div class="panel-heading">
-                <h3 class="panel-title">นอนเฉลี่ยต่อราย</h3>
+                <h3 class="panel-title"><i class="glyphicon glyphicon-signal"></i> นอนเฉลี่ยต่อราย</h3>
             </div>
             <div class="panel-body">
                 <?php
