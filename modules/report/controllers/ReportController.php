@@ -17,6 +17,9 @@ class ReportController extends Controller{
             ')->queryAll();
         $dataProvider = new ArrayDataProvider([
             'allModels'=>$data,
+            'sort'=>[
+                'attributes'=>['yy','mm','cnt']
+            ],
         ]);
         return $this->render('report1',[
             'dataProvider'=>$dataProvider
