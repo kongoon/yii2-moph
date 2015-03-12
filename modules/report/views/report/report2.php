@@ -3,6 +3,7 @@ $this->title = 'จำนวนผู้ป่วยในแยกรายเ�
 $this->params['breadcrumbs'][]=$this->title;
 use kartik\grid\GridView;
 use miloschuman\highcharts\Highcharts;
+use yii\helpers\Html;
 ?>
 <div class="row">
     <div class="col-md-12">
@@ -77,10 +78,23 @@ echo Highcharts::widget([
 echo GridView::widget([
     'dataProvider'=>$dataProvider,
     'panel'=>[
-            'before'=>' '
+        'heading'=>'<h3 class="panel-title"><i class="glyphicon glyphicon-globe"></i> สรุปข้อมูลผู้ป่วยใน</h3>',
+        'type'=>'success',
+        //'before'=>Html::a('<i class="glyphicon glyphicon-plus"></i> Create Country', ['create'], ['class' => 'btn btn-success']),
+        'after'=>Html::a('<i class="glyphicon glyphicon-repeat"></i> โหลดข้อมูลใหม่', ['/report/report/report2'], ['class' => 'btn btn-info']),
+        'footer'=>false
     ],
+    'responsive'=>true,
+    'hover'=>true,
+    'pjax'=>true,
+    'pjaxSettings'=>[
+        'neverTimeout'=>true,
+        'beforeGrid'=>'',
+        'afterGrid'=>'',
+    ],
+    'showPageSummary' => true,
     'columns'=>[
-        ['class'=>'yii\grid\SerialColumn'],
+        //['class'=>'yii\grid\SerialColumn'],
         [
             'label'=>'ปี',
             'attribute'=>'yy'
