@@ -28,3 +28,5 @@ https://bitbucket.org/kongoon/yii2-theme-superhero
 https://bitbucket.org/kongoon/yii2-theme-simplex
 https://bitbucket.org/kongoon/yii2-theme-flaty
 https://bitbucket.org/kongoon/yii2-theme-flat
+
+https://github.com/miloschuman/yii2-highcharts
