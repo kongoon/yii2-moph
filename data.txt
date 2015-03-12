@@ -9,6 +9,7 @@ composer require kartik-v/yii2-krajee-base "dev-master"
 composer require kartik-v/yii2-grid "*"
 composer require kartik-v/yii2-mpdf "*"
 composer require kartik-v/yii2-export "*"
+composer require kartik-v/yii2-widgets "*"
 
 composer require "2amigos/yii2-google-maps-library" "*"
 composer require --prefer-dist miloschuman/yii2-highcharts-widget "dev-master"
