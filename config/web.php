@@ -55,7 +55,8 @@ $config = [
             'gii/*',
             'report/*',
             'gridview/*',
-            'contact/*'
+            'contact/*',
+            'base/*'
         ]
     ],
     'modules' => [
