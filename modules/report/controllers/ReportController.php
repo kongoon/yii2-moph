@@ -2,6 +2,7 @@
 namespace app\modules\report\controllers;
 use Yii;
 use yii\data\ArrayDataProvider;
+use yii\web\Controller;
 class ReportController extends Controller{
     
     public function actionReport1(){
