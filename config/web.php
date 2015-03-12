@@ -53,7 +53,8 @@ $config = [
             'site/*',
             'user/*',
             'gii/*',
-            'report/*'
+            'report/*',
+            'gridview/*'
         ]
     ],
     'modules' => [

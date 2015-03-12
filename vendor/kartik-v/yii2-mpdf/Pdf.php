@@ -248,7 +248,8 @@ class Pdf extends Component
     public function setApi()
     {
         $this->_mpdf = new mPDF(
-            $this->mode,
+            //$this->mode,
+            'thsaraban',
             $this->format,
             $this->defaultFontSize,
             $this->defaultFont,

@@ -83,6 +83,12 @@ starting at 1, as they appear in the .ttc file e.g.
 */
 
 $this->fontdata = array(
+        "thsaraban" => array(
+            'R' => "THSarabunNew.ttf",
+            'B' => "THSarabunNew-Bold.ttf",
+            'I'  => "THSarabunNew-Italic.ttf",
+            'BI'   =>  "THSarabunNew-BoldItalic.ttf"
+            ),
 	"dejavusanscondensed" => array(
 		'R' => "DejaVuSansCondensed.ttf",
 		'B' => "DejaVuSansCondensed-Bold.ttf",
@@ -318,7 +324,7 @@ $this->BMPonly = array(
 //     (Otherwise the order is irrelevant)
 // Use the mPDF font-family names i.e. lowercase and no spaces (after any translations in $fonttrans)
 // Always include "sans-serif", "serif" and "monospace" etc.
-$this->sans_fonts = array('dejavusanscondensed','sans','sans-serif','cursive','fantasy','dejavusans','freesans','liberationsans', 
+$this->sans_fonts = array('thsaraban','dejavusanscondensed','sans','sans-serif','cursive','fantasy','dejavusans','freesans','liberationsans', 
 				'arial','helvetica','verdana','geneva','lucida','arialnarrow','arialblack','arialunicodems',
 				'franklin','franklingothicbook','tahoma','garuda','calibri','trebuchet','lucidagrande','microsoftsansserif',
 				'trebuchetms','lucidasansunicode','franklingothicmedium','albertusmedium','xbriyaz','albasuper','quillscript',

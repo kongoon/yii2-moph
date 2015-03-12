@@ -1,7 +1,7 @@
 <?php
 $this->title = 'จำนวนผู้ป่วยในแยกรายเดือน';
 $this->params['breadcrumbs'][]=$this->title;
-use yii\grid\GridView;
+use kartik\grid\GridView;
 use miloschuman\highcharts\Highcharts;
 ?>
 <div class="row">
@@ -76,6 +76,9 @@ echo Highcharts::widget([
 <?php
 echo GridView::widget([
     'dataProvider'=>$dataProvider,
+    'panel'=>[
+            'before'=>' '
+    ],
     'columns'=>[
         ['class'=>'yii\grid\SerialColumn'],
         [
