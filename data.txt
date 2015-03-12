@@ -43,3 +43,6 @@ sum(t.ACTLOS) as los,
 avg(t.ACTLOS) as los_per_case
 FROM admission t  
 GROUP BY yy,mm
+
+Yii2 Grid Export
+https://github.com/dimpled/Yii2-Learning/blob/master/widgets/install-krajee-yii2-grid.md
