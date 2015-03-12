@@ -3,7 +3,7 @@
 namespace app\models;
 
 use Yii;
-
+use app\models\Tambon;
 /**
  * This is the model class for table "contact".
  *
@@ -29,7 +29,7 @@ class Contact extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['firstname', 'lastname', 'address', 'email'], 'required'],
+            [['firstname', 'lastname', 'address', 'email', 'tambon_id'], 'required'],
             [['address'], 'string'],
             [['firstname', 'lastname', 'email'], 'string', 'max' => 100]
         ];
@@ -46,6 +46,11 @@ class Contact extends \yii\db\ActiveRecord
             'lastname' => 'นามสกุล',
             'address' => 'ที่อยู่',
             'email' => 'อีเมลล์',
+            'tambon_id'=>'ตำบล',
         ];
+    }
+    public function getTambon(){
+        return $this->hasOne(Tambon::className(),
+                ['id'=>'tambon_id']);
     }
 }
