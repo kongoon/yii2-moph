@@ -4,6 +4,8 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use app\models\Province;
+use yii\helpers\Url;
+
 /* @var $this yii\web\View */
 /* @var $model app\models\Contact */
 /* @var $form yii\widgets\ActiveForm */
@@ -54,7 +56,9 @@ use app\models\Province;
             '
         ]);?>
     </div>
-    
+    <?= $form->field($model, 'tambon_id')
+        ->dropDownList([],
+            ['id'=>'tambon','prompt'=>'เลือกตำบล']);?>
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
