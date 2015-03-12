@@ -47,3 +47,47 @@ GROUP BY yy,mm
 
 Yii2 Grid Export
 https://github.com/dimpled/Yii2-Learning/blob/master/widgets/install-krajee-yii2-grid.md
+
+###Query Report 3 สรุปการรักษาพยาบาลผู้ป่วยอยู่รักษาแยกรายเดือน ไม่รวม RW=0
+
+SELECT year(t.DATETIME_DISCH) as yy, 
+month(t.DATETIME_DISCH) as mm, 
+count(t.AN) as cnt, 
+sum(t.ADJRW) as sumadj, 
+sum(t.ADJRW)/sum(if(ADJRW>0,1,0)) as cmi ,
+sum(t.ACTLOS) as los, 
+avg(t.ACTLOS) as los_per_case
+FROM admission t  
+GROUP BY yy,mm
+
+##Query Report4
+สรุปรายโรคผู้ป่วยใน (เฉพาะโรคแรก)
+**** Top 10 โรคผู้ป่วยใน
+รหัสโรค,ชื่อโรค,ชื่อโรค(ไทย),จำนวน,รวม AdjRW,เฉลี่ย AdjRW
+SELECT t.DIAGCODE, i.diagename, i.diagtname, count(t.AN) as cnt
+, sum(a.ADJRW) as sumadj, avg(a.ADJRW) as cmi
+FROM diagnosis_ipd t join cicd10tm i on t.DIAGCODE = i.diagcode
+join admission a on t.AN = a.AN
+WHERE t.DIAGTYPE = 1
+GROUP BY t.DIAGCODE
+ORDER BY cnt desc
+(กราฟแท่ง1  x=diagcode, y=cnt  ให้แสดงแค่ 10 รายการแรก)
+(กราฟแท่ง2  x=diagcode, y=sumadj  ให้แสดงแค่ 10 รายการแรก)
+
+##Query Report5
+สรุปตามกลุ่ม DRG
+select t.DRG, c.drgname, count(t.AN) as cnt, sum(t.ADJRW) as sumadj, avg(t.ADJRW) as cmi
+from admission t join ccmi51drg c on t.DRG = c.drg
+group by t.DRG
+
+##Query Report6
+สรุปตามกลุ่ม MDC
+select c.mdc, c.drgname, count(t.AN) as cnt, sum(t.ADJRW) as sumadj, avg(t.ADJRW) as cmi
+, count(if(substring(t.DRG,3,2)<50,t.an,null)) as orcnt
+, sum(if(substring(t.DRG,3,2)<50,t.ADJRW,0))/count(if(substring(t.DRG,3,2)<50,t.an,null)) as orcmi
+, count(if(substring(t.DRG,3,2)>49,t.an,null)) as norcnt
+, sum(if(substring(t.DRG,3,2)>49,t.ADJRW,0))/count(if(substring(t.DRG,3,2)>49,t.an,null)) as norcmi
+from admission t right join ccmimdc c on left(t.DRG,2) = c.mdc
+where c.mdc between 1 and 25
+group by c.mdc
+
