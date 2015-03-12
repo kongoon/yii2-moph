@@ -20,7 +20,12 @@
         "yiisoft/yii2-swiftmailer": "*",
         "amnah/yii2-user": "dev-master",
         "mdmsoft/yii2-admin": "dev-master",
-        "kongoon/yii2-theme-material": "*"
+        "kongoon/yii2-theme-material": "*",
+        "miloschuman/yii2-highcharts-widget": "dev-master",
+        "2amigos/yii2-google-maps-library": "*",
+        "kartik-v/yii2-krajee-base": "dev-master",
+        "kartik-v/yii2-grid": "*",
+        "kartik-v/yii2-mpdf": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

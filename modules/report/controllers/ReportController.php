@@ -15,6 +15,13 @@ class ReportController extends Controller{
             GROUP BY yy,mm
             ORDER BY yy,mm
             ')->queryAll();
+        //เตรียมข้อมูลส่งให้กราฟ
+        for($i=0;$i<sizeof($data);$i++){
+            $yy[] = $data[$i]['yy'];
+            $mm[] = $data[$i]['yy'].'-'.$data[$i]['mm'];
+            $cnt[] = $data[$i]['cnt'];
+        }
+        
         $dataProvider = new ArrayDataProvider([
             'allModels'=>$data,
             'sort'=>[
@@ -22,7 +29,8 @@ class ReportController extends Controller{
             ],
         ]);
         return $this->render('report1',[
-            'dataProvider'=>$dataProvider
+            'dataProvider'=>$dataProvider,
+            'yy'=>$yy,'mm'=>$mm,'cnt'=>$cnt,
         ]);
     }
 }

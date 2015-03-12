@@ -1,5 +1,7 @@
 <?php
 use yii\grid\GridView;
+use miloschuman\highcharts\Highcharts;
+
 
 echo GridView::widget([
     'dataProvider'=>$dataProvider,
