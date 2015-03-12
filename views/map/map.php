@@ -13,6 +13,38 @@ $map = new Map([
 foreach($contacts as $c){
   $coords = new LatLng(['lat'=>$c->lat,'lng'=>$c->lng]);  
   $marker = new Marker(['position'=>$coords]);
+  $marker->attachInfoWindow(
+    new InfoWindow([
+        'content'=>'
+     
+            <h4>'.$c->firstname.' '.$c->lastname.'</h4>
+              <table class="table table-bordered table-hover">
+                <tr>
+                    <td>ที่อยู่</td>
+                    <td>'.$c->address.'</td>
+                </tr>
+                <tr>
+                    <td>ตำบล</td>
+                    <td>'.$c->tambon->tambon_name.'</td>
+                </tr>
+                <tr>
+                    <td>อำเภอ</td>
+                    <td>'.$c->tambon->district->district_name.'</td>
+                </tr>
+                <tr>
+                    <td>จังหวัด</td>
+                    <td>'.$c->tambon->province->province_name.'</td>
+                </tr>
+                <tr>
+                    <td>อีเมลล์</td>
+                    <td>'.$c->email.'</td>
+                </tr>
+              </table>
+
+        '
+    ])
+  );
+  
   $map->addOverlay($marker);
 }
 echo $map->display();
