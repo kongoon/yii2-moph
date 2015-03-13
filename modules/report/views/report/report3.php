@@ -13,8 +13,15 @@ use yii\helpers\Html;
                 <h3 class="panel-title">ค้นหาข้อมูล</h3>
             </div>
             <div class="panel-body">
+                <?php
+                if(isset($_POST['year'])){
+                    $y=$_POST['year'];
+                }else{
+                    $y='';
+                }
+                ?>
                 <?= Html::beginForm();?>
-                <?= Html::dropDownList('year',null,['2014'=>'2014','2015'=>'2015'],['class'=>'form-control']);?>
+                <?= Html::dropDownList('year',$y,['2014'=>'2014','2015'=>'2015'],['class'=>'form-control','prompt'=>'โปรดเลือกปี','required'=>true]);?>
                 <?= Html::submitButton('ค้นหา',['class'=>'btn btn-info']);?>
                 <?= Html::endForm();?>
             </div>
