@@ -44,6 +44,10 @@ $config = [
         'db' => require(__DIR__ . '/db.php'),
         'authManager' => [
             'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\DbManager'
+        ],
+        'urlManager'=>[
+            'enablePrettyUrl'=>true,
+            'showScriptName'=>false,
         ]
     ],
     'as access' => [
@@ -57,7 +61,9 @@ $config = [
             'gridview/*',
             'contact/*',
             'base/*',
-            'map/*'
+            'map/*',
+            'debug/*',
+            'upload/*'
         ]
     ],
     'modules' => [

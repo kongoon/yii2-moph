@@ -1,0 +1,12 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:x='urn:schemas-microsoft-com:office:excel'xmlns='http://www.w3.org/TR/REC-html40'><head><meta http-equiv='Content-Type' content='text/html;charset=utf-8'/><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>ExportWorksheet</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table class='kv-grid-table table table-bordered table-striped'><thead>
+
+<tr><th style='width: 4.26%;'>#</th><th style='width: 8.72%;'><a href='/yii2-moph/web/index.php?r=report%2Freport%2Freport2&amp;sort=yy' data-sort='yy'>ปี</a></th><th style='width: 8.94%;'><a href='/yii2-moph/web/index.php?r=report%2Freport%2Freport2&amp;sort=mm' data-sort='mm'>เดือน</a></th><th style='width: 20.21%;'><a href='/yii2-moph/web/index.php?r=report%2Freport%2Freport2&amp;sort=cnt' data-sort='cnt'>จำนวนผู้ป่วยใน</a></th><th style='width: 15.96%;'><a href='/yii2-moph/web/index.php?r=report%2Freport%2Freport2&amp;sort=sumadj' data-sort='sumadj'>รวม</a></th><th style='width: 10.96%;'><a href='/yii2-moph/web/index.php?r=report%2Freport%2Freport2&amp;sort=cmi' data-sort='cmi'>CMI</a></th><th style='width: 9.47%;'><a href='/yii2-moph/web/index.php?r=report%2Freport%2Freport2&amp;sort=los' data-sort='los'>LOS</a></th><th style='width: 21.7%;'><a href='/yii2-moph/web/index.php?r=report%2Freport%2Freport2&amp;sort=los_per_case' data-sort='los_per_case'>นอนเฉลี่ยต่อราย</a></th></tr>
+
+</thead>
+<tbody>
+<tr data-key='0'><td>1</td><td>2014</td><td>10</td><td>510</td><td>1,049.7879</td><td>2.0584</td><td>2,541</td><td>4.98</td></tr>
+<tr data-key='1'><td>2</td><td>2014</td><td>11</td><td>561</td><td>1,166.2270</td><td>2.0788</td><td>2,531</td><td>4.51</td></tr>
+<tr data-key='2'><td>3</td><td>2014</td><td>12</td><td>612</td><td>1,621.0557</td><td>2.6488</td><td>3,540</td><td>5.78</td></tr>
+<tr data-key='3'><td>4</td><td>2015</td><td>1</td><td>601</td><td>1,285.7601</td><td>2.1394</td><td>2,894</td><td>4.82</td></tr>
+<tr data-key='4'><td>5</td><td>2015</td><td>2</td><td>552</td><td>1,001.0729</td><td>1.8135</td><td>2,288</td><td>4.14</td></tr>
+</tbody></table></body></html>

@@ -1,12 +1,11 @@
-<div class="report-default-index">
-    <h1><?= $this->context->action->uniqueId ?></h1>
-    <p>
-        This is the view content for action "<?= $this->context->action->id ?>".
-        The action belongs to the controller "<?= get_class($this->context) ?>"
-        in the "<?= $this->context->module->id ?>" module.
-    </p>
-    <p>
-        You may customize this page by editing the following file:<br>
-        <code><?= __FILE__ ?></code>
-    </p>
+<?php
+use yii\helpers\Html;
+$this->title = 'MOPH Report';
+$this->params['breadcrumbs'][]='MOPH Report';
+?>
+<div class="report-default-index text-center">
+    <h1>MOPH Report</h1>
+    <?= Html::a('Report1', ['/report/report/report1'], ['class'=>'btn btn-lg btn-info']);?>
+    <?= Html::a('Report2', ['/report/report/report2'], ['class'=>'btn btn-lg btn-info']);?>
+    <?= Html::a('Report3', ['/report/report/report3'], ['class'=>'btn btn-lg btn-info']);?>
 </div>

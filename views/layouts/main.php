@@ -28,7 +28,7 @@ material\MaterialAsset::register($this);
     <div class="wrap">
         <?php
             NavBar::begin([
-                'brandLabel' => 'MophReport',
+                'brandLabel' => 'MOPH Report',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-default navbar-fixed-top',
@@ -38,6 +38,13 @@ material\MaterialAsset::register($this);
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => [
                     ['label' => 'หน้าหลัก', 'url' => ['/site/index']],
+                    ['label' => 'รายงาน',
+                        'items'=>[
+                            ['label'=>'รายงาน1','url'=>['/report/report/report1']],
+                            ['label'=>'รายงาน2','url'=>['/report/report/report2']],
+                            ['label'=>'รายงาน3','url'=>['/report/report/report3']],
+                        ]
+                    ],
                     ['label' => 'เกี่ยวกับเรา', 'url' => ['/site/about']],
                     ['label' => 'ติดต่อ', 'url' => ['/site/contact']],
                     ['label' => 'User', 'url' => ['/user']],
@@ -55,13 +62,20 @@ material\MaterialAsset::register($this);
             <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>
+<?php
+foreach(Yii::$app->session->getAllFlashes() as $key=>$message){
+    echo '<div class="alert alert-'.$key.'" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        '.ucfirst($key).'! '.$message.'</div>';
+}
+?>
             <?= $content ?>
         </div>
     </div>
 
     <footer class="footer">
         <div class="container">
-            <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+            <p class="pull-left">&copy; MOPH <?= date('Y') ?></p>
             <p class="pull-right"><?= Yii::powered() ?></p>
         </div>
     </footer>
