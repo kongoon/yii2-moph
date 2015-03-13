@@ -71,6 +71,12 @@ class ReportController extends Controller{
         ]);
     }
     public function actionReport3(){
+        if(isset($_POST['year'])){
+            $y = "AND year(t.DATETIME_DISCH)='".$_POST['year']."' ";
+            $y .= '';
+        }else{
+            $y = '';
+        }
         $connection = Yii::$app->db;
         $data = $connection->createCommand('
             SELECT year(t.DATETIME_DISCH) as yy, 
@@ -81,6 +87,7 @@ class ReportController extends Controller{
             sum(t.ACTLOS) as los, 
             avg(t.ACTLOS) as los_per_case
             FROM admission t  
+            WHERE 1=1 '.$y.' 
             GROUP BY yy,mm
             ')->queryAll();
         //เตรียมข้อมูลส่งให้กราฟ
