@@ -14,7 +14,8 @@ use yii\helpers\Html;
             </div>
             <div class="panel-body">
                 <?= Html::beginForm();?>
-                
+                <?= Html::dropDownList('year',null,['2014'=>'2014','2015'=>'2015'],['class'=>'form-control']);?>
+                <?= Html::submitButton('ค้นหา',['class'=>'btn btn-info']);?>
                 <?= Html::endForm();?>
             </div>
         </div>
