@@ -8,6 +8,20 @@ use yii\helpers\Html;
 ?>
 <div class="row">
     <div class="col-md-12">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">ค้นหาข้อมูล</h3>
+            </div>
+            <div class="panel-body">
+                <?= Html::beginForm();?>
+                
+                <?= Html::endForm();?>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-12">
         <div class="panel panel-warning">
             <div class="panel-heading">
                 <h3 class="panel-title"><i class="glyphicon glyphicon-signal"></i> จำนวนผู้ป่วยในแยกรายเดือน</h3>
@@ -135,7 +149,7 @@ use yii\helpers\Html;
                 [
                     'label' => 'CMI',
                     'attribute' => 'cmi',
-                    'format'=>['decimal',4]
+                    'format' => ['decimal', 4]
                 ],
                 [
                     'label' => 'LOS',
@@ -145,7 +159,7 @@ use yii\helpers\Html;
                 [
                     'label' => 'นอนเฉลี่ยต่อราย',
                     'attribute' => 'los_per_case',
-                    'format'=>['decimal',2]
+                    'format' => ['decimal', 2]
                 ],
             ]
         ]);
