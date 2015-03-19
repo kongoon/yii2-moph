@@ -47,5 +47,14 @@ foreach($contacts as $c){
   
   $map->addOverlay($marker);
 }
-
-echo $map->display();
+?>
+<div class="panel panel-danger">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="glyphicon glyphicon-signal"></i> การแสดงแผนที่ Google Map จากฐานข้อมูล</h3>
+    </div>
+    <div class="panel-body">
+        <?php
+        echo $map->display();
+        ?>
+    </div>
+</div>
